@@ -1,0 +1,28 @@
+{
+    "$schema": "",
+    "id": "display-alert",
+    "name": {
+      "en": "Display Alert"
+    },
+    "description": {
+      "en": "Displays an alert dialog to the user."
+    },
+    "dependencies": [
+      {
+        "name": "IAlertService"
+      }
+    ],
+    "configuration": {
+      "$schema": "http://json-schema.org/schema#",
+      "type": "object",
+      "properties": {
+        "type": {
+          "$ref": "#/definitions/pullFromType"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    }
+  }
+  
