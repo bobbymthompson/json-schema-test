@@ -1,0 +1,30 @@
+{
+  "title": "JSON Schema Definitions for Operations",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "pullFromType": {
+      "title": "Type",
+      "description": "Where to pull the configuration data from (e.g. constant value or property).",
+      "type": "string",
+      "enum": ["constant", "property"]
+    },
+    "dependency": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the attribute"
+        },
+        "schema": {
+          "description": "The json schema of the property"
+        }
+      }
+    },
+    "configuration": {
+      "$ref": "http://json-schema.org/draft-07/schema#",
+      "description": "The json schema of the property"
+    }
+  }
+}

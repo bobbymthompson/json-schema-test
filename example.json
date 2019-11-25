@@ -1,26 +1,30 @@
 {
-    "$schema": "https://raw.githubusercontent.com/striker8118/json-schema-test/master/schema.json",
-    "id": "display-alert",
+    "$schema": "http://bitbucket.hylandqa.net/projects/FLEX/repos/flex-json-schemas/raw/operation-definition-schema.json",
+    "id": "console-log",
     "name": {
-      "en": "Display Alert"
+      "en": "Console Log"
     },
     "description": {
-      "en": "Displays an alert dialog to the user."
+      "en": "Logs an entry to the console."
     },
-    "dependencies": [
-      {
-        "name": "IAlertService"
-      }
-    ],
+    "dependencies": [],
     "configuration": {
-      "$schema": "http://json-schema.org/schema#",
+      "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "https://raw.githubusercontent.com/striker8118/json-schema-test/master/schema.json#/definitions/pullFromType"
+          "$ref": "#/definitions/pullFromType"
+        },
+        "level": {
+          "title": "Level",
+          "description": "The log level.",
+          "type": "string",
+          "enum": ["log", "warn", "error"]
         },
         "value": {
-          "type": "string"
+          "title": "The message ",
+          "type": "string",
+          "minLength": 1
         }
       }
     }

@@ -1,0 +1,25 @@
+{
+  "$id": "https://raw.githubusercontent.com/striker8118/json-schema-test/master/operation-definition-schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "$ref": "translations.json#/definitions/translations"
+    },
+    "description": {
+      "$ref": "translations.json#/definitions/translations"
+    },
+    "dependencies": {
+      "items": {
+        "$ref": "operation-definitions.json#/definitions/dependency"
+      }
+    },
+    "configuration": {
+      "$ref": "operation-definitions.json#/definitions/configuration"
+    }
+  },
+  "additionalProperties": false
+}
