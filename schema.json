@@ -7,15 +7,12 @@
         "type": "string"
       },
       "name": {
-        "type": "object",
         "$ref": "translations.json#/definitions/translations"
       },
       "description": {
-        "type": "object",
         "$ref": "translations.json#/definitions/translations"
       },
       "dependencies": {
-        "type": "array",
         "items": {
           "$ref": "#/definitions/dependency"
         }
