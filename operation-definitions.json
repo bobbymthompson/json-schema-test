@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "definitions": {
-    "pullFromType": {
+    "opTypeToValueType": {
       "title": "Type",
       "description": "Where to pull the configuration data from (e.g. constant value or property).",
       "type": "string",

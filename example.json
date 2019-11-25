@@ -1,5 +1,5 @@
 {
-    "$schema": "http://bitbucket.hylandqa.net/projects/FLEX/repos/flex-json-schemas/raw/operation-definition-schema.json",
+    "$schema": "https://raw.githubusercontent.com/striker8118/json-schema-test/master/operation-definitions-schema.json",
     "id": "console-log",
     "name": {
       "en": "Console Log"
@@ -13,16 +13,18 @@
       "type": "object",
       "properties": {
         "type": {
-          "$ref": "#/definitions/pullFromType"
+          "$ref": "https://raw.githubusercontent.com/striker8118/json-schema-test/master/operation-definitions-schema.json#/definitions/opTypeToValueType"
         },
         "level": {
           "title": "Level",
-          "description": "The log level.",
+          "description": "The log level (log, warn, error).",
           "type": "string",
+          "default": "log",
           "enum": ["log", "warn", "error"]
         },
         "value": {
-          "title": "The message ",
+          "title": "Value",
+          "description": "A (tokenized) string or the name of a property that will be used to log a message to the console.",
           "type": "string",
           "minLength": 1
         }

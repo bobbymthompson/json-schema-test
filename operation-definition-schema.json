@@ -19,6 +19,9 @@
     },
     "configuration": {
       "$ref": "operation-definitions.json#/definitions/configuration"
+    },
+    "$schema": {
+      "description": "Ignored"
     }
   },
   "additionalProperties": false
